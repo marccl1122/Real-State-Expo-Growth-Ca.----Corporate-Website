@@ -1,173 +1,358 @@
+/* Global Styles */
 * {
-	box-sizing: border-box;
+	box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
 	margin: 0;
 	padding: 0;
-}
-
-body {
-	font-family: Arial, sans-serif;
-	line-height: 1.6;
-	color: #333;
-	background-color: #f9f9f9;
-}
-
-header {
-	background-color: #333;
-	color: #fff;
-	padding: 1em;
-	text-align: center;
-}
-
-header nav ul {
-	list-style: none;
+  }
+  
+  body {
+	font-family: 'Open Sans', sans-serif; /* Sets the default font family */
+	font-size: 16px; /* Sets the base font size */
+	line-height: 1.5; /* Sets the line height for better readability */
+	color: #333; /* Default text color */
+	background-color: #f9f9f9; /* Default background color */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+	font-weight: bold; /* Bold font for headings */
+	color: #333; /* Heading color */
+	margin-bottom: 10px; /* Space below headings */
+  }
+  
+  p {
+	margin-bottom: 20px; /* Space below paragraphs */
+  }
+  
+  a {
+	text-decoration: none; /* Removes underline from links */
+	color: #337ab7; /* Link color */
+  }
+  
+  a:hover {
+	color: #23527c; /* Link color on hover */
+  }
+  
+  /* Bootstrap 4 Classes */
+  .container {
+	max-width: 1200px; /* Maximum width for the container */
+	margin: 0 auto; /* Centers the container */
+	padding: 20px; /* Padding inside the container */
+  }
+  
+  .row {
+	display: flex;
+	flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+	margin-right: -15px;
+	margin-left: -15px;
+  }
+  
+  .col {
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+  }
+  
+  /* Header Styles */
+  .header {
+	background-color: #333; /* Header background color */
+	color: #fff; /* Header text color */
+	padding: 20px; /* Padding inside the header */
+	text-align: center; /* Centers the header content */
+  }
+  
+  .header .logo {
+	font-size: 24px; /* Logo font size */
+	font-weight: bold; /* Bold font for the logo */
+	margin-bottom: 10px; /* Space below the logo */
+  }
+  
+  .header .nav {
+	list-style: none; /* Removes list styling */
 	margin: 0;
 	padding: 0;
 	display: flex;
-	justify-content: space-between;
-}
-
-header nav li {
-	margin-right: 20px;
-}
-
-header nav a {
-	color: #fff;
-	text-decoration: none;
-}
-
-header nav a:hover {
-	color: #ccc;
-}
-
-.hero {
-	background-image: linear-gradient(to bottom, #333, #666);
-	background-size: 100% 300px;
+	justify-content: space-between; /* Evenly spaces out nav items */
+  }
+  
+  .header .nav li {
+	margin-right: 20px; /* Space between nav items */
+  }
+  
+  .header .nav a {
+	color: #fff; /* Nav link color */
+	text-decoration: none; /* Removes underline from nav links */
+  }
+  
+  .header .nav a:hover {
+	color: #ccc; /* Nav link color on hover */
+  }
+  
+  /* Hero Styles */
+  .hero {
+	background-image: linear-gradient(to bottom, #333, #444); /* Hero background gradient */
+	background-size: 100% 300px; /* Background size */
 	background-position: 0% 100%;
-	height: 100vh;
+	height: 100vh; /* Full viewport height */
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	color: #fff;
-}
-
-.hero h1 {
-	font-size: 48px;
-	margin-bottom: 20px;
-}
-
-.hero p {
-	font-size: 24px;
-	margin-bottom: 40px;
-}
-
-.hero button {
-	background-color: #333;
-	color: #fff;
-	border: none;
-	padding: 10px 20px;
-	font-size: 18px;
-	cursor: pointer;
-}
-
-.hero button:hover {
-	background-color: #444;
-}
-
-#about {
-	padding: 2em;
-}
-
-#about h2 {
-	margin-top: 0;
-}
-
-#services {
-	background-color: #f7f7f7;
-	padding: 2em;
-}
-
-#services ul {
-	list-style: none;
+	align-items: center; /* Centers content vertically and horizontally */
+	color: #fff; /* Hero text color */
+	text-align: center; /* Centers text */
+  }
+  
+  .hero h1 {
+	font-size: 48px; /* Hero heading font size */
+	margin-bottom: 20px; /* Space below heading */
+  }
+  
+  .hero p {
+	font-size: 24px; /* Hero paragraph font size */
+	margin-bottom: 40px; /* Space below paragraph */
+  }
+  
+  .hero button {
+	background-color: #337ab7; /* Button background color */
+	color: #fff; /* Button text color */
+	border: none; /* Removes button border */
+	padding: 10px 20px; /* Button padding */
+	font-size: 18px; /* Button font size */
+	cursor: pointer; /* Cursor changes to pointer on hover */
+  }
+  
+  .hero button:hover {
+	background-color: #23527c; /* Button background color on hover */
+  }
+  
+  /* About Styles */
+  .about {
+	padding: 40px; /* Padding inside the about section */
+	background-color: #f9f9f9; /* Background color */
+  }
+  
+  .about h2 {
+	font-size: 24px; /* About heading font size */
+	margin-bottom: 20px; /* Space below heading */
+  }
+  
+  .about p {
+	font-size: 18px; /* About paragraph font size */
+	margin-bottom: 40px; /* Space below paragraph */
+  }
+  
+  .about img {
+	width: 100%; /* Full width image */
+	height: 200px; /* Fixed height */
+	object-fit: cover; /* Ensures image covers the container */
+	margin-bottom: 20px; /* Space below image */
+	border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Services Styles */
+  .services {
+	padding: 40px; /* Padding inside the services section */
+	background-color: #f9f9f9; /* Background color */
+  }
+  
+  .services h2 {
+	font-size: 24px; /* Services heading font size */
+	margin-bottom: 20px; /* Space below heading */
+  }
+  
+  .services ul {
+	list-style: none; /* Removes list styling */
+	margin: 0;
+	padding: 0;
+  }
+  
+  .services li {
+	margin-bottom: 20px; /* Space below each list item */
+  }
+  
+  .services i {
+	font-size: 24px; /* Icon font size */
+	margin-right: 10px; /* Space to the right of icon */
+  }
+  
+  .services h3 {
+	font-size: 18px; /* Service item heading font size */
+	margin-bottom: 10px; /* Space below heading */
+  }
+  
+  .services p {
+	font-size: 16px; /* Service item paragraph font size */
+	margin-bottom: 20px; /* Space below paragraph */
+  }
+  
+  /* Portfolio Styles */
+  .portfolio {
+	padding: 40px; /* Padding inside the portfolio section */
+	background-color: #f9f9f9; /* Background color */
+  }
+  
+  .portfolio h2 {
+	font-size: 24px; /* Portfolio heading font size */
+	margin-bottom: 20px; /* Space below heading */
+  }
+  
+  .portfolio ul {
+	list-style: none; /* Removes list styling */
 	margin: 0;
 	padding: 0;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-#services li {
-	width: 30%;
-	margin: 20px;
-	background-color: #fff;
-	padding: 20px;
-	border: 1px solid #ddd;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#services i {
-	font-size: 24px;
-	margin-bottom: 10px;
-}
-
-#services h3 {
-	margin-top: 0;
-}
-
-#contact {
-	background-color: #333;
-	color: #fff;
-	padding: 2em;
-}
-
-#contact h2 {
-	margin-top: 0;
-}
-
-#contact form {
+	flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+	justify-content: center; /* Centers the items */
+  }
+  
+  .portfolio li {
+	margin: 20px; /* Margin around each portfolio item */
+	width: calc(33.33% - 20px); /* Width of each portfolio item */
+  }
+  
+  .portfolio img {
+	width: 100%; /* Full width image */
+	height: 150px; /* Fixed height */
+	object-fit: cover; /* Ensures image covers the container */
+	margin-bottom: 10px; /* Space below image */
+	border-radius: 10px; /* Rounded corners */
+  }
+  
+  .portfolio h3 {
+	font-size: 18px; /* Portfolio item heading font size */
+	margin-bottom: 10px; /* Space below heading */
+  }
+  
+  .portfolio p {
+	font-size: 16px; /* Portfolio item paragraph font size */
+	margin-bottom: 20px; /* Space below paragraph */
+  }
+  
+  /* Contact Styles */
+  .contact {
+	padding: 40px; /* Padding inside the contact section */
+	background-color: #f9f9f9; /* Background color */
+  }
+  
+  .contact h2 {
+	font-size: 24px; /* Contact heading font size */
+	margin-bottom: 20px; /* Space below heading */
+  }
+  
+  .contact form {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-}
-
-#contact input,
-#contact textarea {
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 20px;
-	border: 1px solid #ccc;
-}
-
-#contact button {
-	background-color: #333;
-	color: #fff;
-	border: none;
-	padding: 10px 20px;
-	font-size: 18px;
-	cursor: pointer;
-}
-
-#contact button:hover {
-	background-color: #444;
-}
-
-footer {
-	background-color: #333;
-	color: #fff;
-	padding: 1em;
-	text-align: center;
-	clear: both;
-}
-.about-image {
-	display: contents;
-	margin: 0 auto;
-	max-width: 800;
-	height: 800;
-	justify-content: center;
-	position: absolute;
-	transition: transform 0.3s ease-in-out; /* add transition for hover animation */
-}
-
-.about-image:hover {
-	transform: scale(1.1); /* scale up the image on hover */
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a subtle shadow on hover */
-}
+	align-items: center; /* Centers form elements */
+	padding: 20px; /* Padding inside the form */
+	border: 1px solid #ccc; /* Border around the form */
+	border-radius: 10px; /* Rounded corners */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  .contact label {
+	font-size: 18px; /* Label font size */
+	margin-bottom: 10px; /* Space below label */
+  }
+  
+  .contact input,
+  .contact textarea {
+	width: 100%; /* Full width input and textarea */
+	padding: 10px; /* Padding inside input and textarea */
+	margin-bottom: 20px; /* Space below input and textarea */
+	border: 1px solid #ccc; /* Border around input and textarea */
+	border-radius: 10px; /* Rounded corners */
+  }
+  
+  .contact input[type="submit"] {
+	background-color: #337ab7; /* Submit button background color */
+	color: #fff; /* Submit button text color */
+	border: none; /* Removes border */
+	padding: 10px 20px; /* Padding inside the button */
+	font-size: 18px; /* Button font size */
+	cursor: pointer; /* Cursor changes to pointer on hover */
+  }
+  
+  .contact input[type="submit"]:hover {
+	background-color: #23527c; /* Button background color on hover */
+  }
+  
+  /* Modal Styles */
+  .modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed position */
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+	z-index: 1000; /* Ensures modal is above other elements */
+  }
+  .modal.show {
+	display: block; /* Displays the modal when it has the 'show' class */
+  }
+  
+  .modal-content {
+	position: relative; /* Positioned relative to its normal position */
+	background-color: #fff; /* Modal content background color */
+	padding: 20px; /* Padding inside the modal content */
+	border: 1px solid #ccc; /* Border around the modal content */
+	border-radius: 10px; /* Rounded corners */
+	width: 80%; /* Width of the modal content */
+	margin: 40px auto; /* Centers the modal content */
+  }
+  
+  .modal-content img {
+	width: 100%; /* Full width image */
+	height: 200px; /* Fixed height */
+	object-fit: cover; /* Ensures image covers the container */
+	margin-bottom: 10px; /* Space below image */
+	border-radius: 10px; /* Rounded corners */
+  }
+  
+  .modal-content .modal-caption {
+	font-size: 18px; /* Caption font size */
+	margin-bottom: 20px; /* Space below caption */
+  }
+  
+  .modal-close {
+	position: absolute; /* Absolutely positioned within the modal */
+	top: 10px; /* 10px from the top */
+	right: 10px; /* 10px from the right */
+	font-size: 24px; /* Close button font size */
+	cursor: pointer; /* Cursor changes to pointer on hover */
+  }
+  
+  .modal-close:hover {
+	color: #ccc; /* Close button color on hover */
+  }
+  
+  /* Dark Mode Styles */
+  .dark-mode {
+	background-color: #333; /* Dark mode background color */
+	color: #fff; /* Dark mode text color */
+  }
+  
+  .dark-mode .header {
+	background-color: #444; /* Dark mode header background color */
+  }
+  
+  .dark-mode .hero {
+	background-image: linear-gradient(to bottom, #444, #555); /* Dark mode hero background gradient */
+  }
+  
+  .dark-mode .about,
+  .dark-mode .services,
+  .dark-mode .portfolio,
+  .dark-mode .contact {
+	background-color: #333; /* Dark mode section background color */
+	color: #fff; /* Dark mode section text color */
+  }
+  
+  .dark-mode a {
+	color: #fff; /* Dark mode link color */
+  }
+  
+  .dark-mode a:hover {
+	color: #ccc; /* Dark mode link color on hover */
+  }
+  

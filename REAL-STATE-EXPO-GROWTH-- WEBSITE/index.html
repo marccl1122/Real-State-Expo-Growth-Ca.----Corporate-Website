@@ -1,95 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Real State Expo Growth</title>
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<!-- Header Section -->
-		<header>
-			<nav>
-				<ul>
-					<li><a href="#home">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real State Expo Growth</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="btn btn-secondary fixed-top" style="right: 20px; top: 20px; z-index: 1000;">
+        <i class="fas fa-moon"></i>
+    </button>
 
-		<!-- Hero Section -->
-		<section id="home" class="hero">
-			<div class="container">
-				<h1>Real State Expo Growth</h1>
-				<p>
-					Unlock the full potential of your real estate business with our expert photography, videography, and digital
-					marketing solutions.
-				</p>
-				<button>Learn More</button>
-			</div>
-		</section>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Real State Expo Growth</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-		<!-- About Section -->
-		<section id="about">
-			<div class="container">
-				<h2>About Us</h2>
-				<p>
-					At Real State Expo Growth, we're passionate about helping real estate professionals like you succeed in
-					today's competitive market. Our team of experts has years of experience in photography, videography, and
-					digital marketing, and we're dedicated to providing top-notch solutions that drive results.
-				</p>
-				<img src="img/58ee8280-f935-4794-b32d-8eb8b74de240.png" width="843" heigth="843" alt="About Image" />
-			</div>
-		</section>
+    <!-- Hero Section -->
+    <section id="home" class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Real State Expo Growth</h1>
+            <p class="lead">Unlock the full potential of your real estate business with our expert photography, videography, and digital marketing solutions.</p>
+            <button class="btn btn-primary">Learn More</button>
+        </div>
+    </section>
 
-		<!-- Services Section -->
-		<section id="services">
-			<div class="container">
-				<h2>Our Services</h2>
-				<ul>
-					<li>
-						<i class="fas fa-camera"></i>
-						<h3>Photography</h3>
-						<p>High-quality photography that showcases your properties in the best possible light.</p>
-					</li>
-					<li>
-						<i class="fas fa-video"></i>
-						<h3>Videography</h3>
-						<p>Engaging video content that brings your properties to life and captivates potential buyers.</p>
-					</li>
-					<li>
-						<i class="fas fa-laptop"></i>
-						<h3>Digital Marketing</h3>
-						<p>Targeted online marketing campaigns that drive traffic, generate leads, and increase sales.</p>
-					</li>
-				</ul>
-			</div>
-		</section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="font-weight-bold">About Us</h2>
+            <p class="text-muted">
+                At Real State Expo Growth, we're passionate about helping real estate professionals like you succeed in today's competitive market. Our team of experts has years of experience in photography, videography, and digital marketing, and we're dedicated to providing top-notch solutions that drive results.
+            </p>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="About Image">
+                <h3 class="font-weight-bold">Our Story</h3>
+                <p class="text-muted">We're a team of creatives who are passionate about helping real estate professionals succeed.</p>
+            </div>
+        </div>
+    </section>
 
-		<!-- Contact Section -->
-		<section id="contact">
-			<div class="container">
-				<h2>Get in Touch</h2>
-				<p>
-					Ready to take your real estate business to the next level? Contact us today to learn more about our services
-					and how we can help you achieve your goals.
-				</p>
-				<form>
-					<input type="text" placeholder="Name" />
-					<input type="email" placeholder="Email" />
-					<textarea placeholder="Message"></textarea>
-					<button>Send</button>
-				</form>
-			</div>
-		</section>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="font-weight-bold">Our Services</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <i class="fas fa-camera"></i>
+                    <h3 class="font-weight-bold">Photography</h3>
+                    <p class="text-muted">High-quality photography that showcases your properties in the best possible light.</p>
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-video"></i>
+                    <h3 class="font-weight-bold">Videography</h3>
+                    <p class="text-muted">Engaging video content that brings your properties to life and captivates potential buyers.</p>
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-laptop"></i>
+                    <h3 class="font-weight-bold">Digital Marketing</h3>
+                    <p class="text-muted">Targeted online marketing strategies that drive traffic and generate leads for your real estate business.</p>
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 class="font-weight-bold">Market Analysis</h3>
+                    <p class="text-muted">In-depth market analysis to help you understand your target audience and make informed business decisions.</p>
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-phone"></i>
+                    <h3 class="font-weight-bold">Lead Generation</h3>
+                    <p class="text-muted">Proven lead generation strategies to help you attract potential buyers and sellers.</p>
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-lock"></i>
+                    <h3 class="font-weight-bold">Website Security</h3>
+                    <p class="text-muted">Secure website solutions to protect your online presence and ensure a safe user experience.</p>
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-cog"></i>
+                    <h3 class="font-weight-bold">Website Maintenance</h3>
+                    <p class="text-muted">Regular website maintenance to ensure your online presence is always up-to-date and running smoothly.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-		<!-- Footer Section -->
-		<footer>
-			<p>&copy; 2023 Real State Expo Growth. All rights reserved.</p>
-		</footer>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="font-weight-bold">Our Portfolio</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Portfolio Image 1">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Portfolio Image 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Portfolio Image 3">
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<script src="script.js"></script>
-	</body>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="font-weight-bold">Get in Touch</h2>
+            <p class="text-muted">Ready to take your real estate business to the next level? Contact us today to learn more about our services and how we can help you succeed.</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" placeholder="Enter your message"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p class="text-muted">Copyright 2023 Real State Expo Growth. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>

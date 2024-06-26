@@ -1,12 +1,22 @@
-// Add event listener to navigation menu
-document.addEventListener("DOMContentLoaded", function () {
-	const nav = document.querySelector("nav");
-	nav.addEventListener("click", function (event) {
-		if (event.target.tagName === "A") {
-			event.preventDefault();
-			const href = event.target.getAttribute("href");
-			const section = document.querySelector(href);
-			section.scrollIntoView({ behavior: "smooth" });
-		}
-	});
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check if dark mode is enabled in localStorage
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+
+    // Toggle dark mode on button click
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            localStorage.removeItem('dark-mode');
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    });
 });
